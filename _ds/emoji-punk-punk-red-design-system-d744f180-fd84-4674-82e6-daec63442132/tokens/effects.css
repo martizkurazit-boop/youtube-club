@@ -1,0 +1,57 @@
+/* ============================================================
+   EFFECTS — shadows, red glow, glass, grain.
+   Red = light & energy on a dark surface, never flat neon.
+   ============================================================ */
+
+:root {
+  /* ---- Depth shadows ---- */
+  --shadow-card: 0 12px 40px rgba(0, 0, 0, 0.55);
+  --shadow-card-hover: 0 18px 45px rgba(242, 13, 13, 0.18);
+  --shadow-panel: 0 30px 90px rgba(0, 0, 0, 0.7);
+
+  /* ---- Red glow (the signature light) ---- */
+  --glow-cta: 0 12px 30px rgba(242, 13, 13, 0.42), 0 0 50px rgba(242, 13, 13, 0.18);
+  --glow-cta-hover: 0 16px 40px rgba(242, 13, 13, 0.55), 0 0 70px rgba(242, 13, 13, 0.28);
+  --glow-soft: 0 0 60px rgba(242, 13, 13, 0.16);
+  --glow-ring: 0 0 0 1px rgba(242, 13, 13, 0.35), 0 0 40px rgba(242, 13, 13, 0.22);
+
+  /* ---- Inner light ---- */
+  --inner-light: inset 0 1px 0 rgba(255, 255, 255, 0.06); /* @kind shadow */
+
+  /* ---- Glass ---- */
+  --glass-blur: blur(18px); /* @kind other */
+
+  /* ---- Motion ---- */
+  --ease-luxe: cubic-bezier(0.22, 1, 0.36, 1); /* @kind other */
+  --dur-fast: 180ms; /* @kind other */
+  --dur-base: 320ms; /* @kind other */
+  --dur-slow: 600ms; /* @kind other */
+}
+
+/* Subtle digital grain overlay — apply to a section's ::before / a div.
+   Keeps dark backgrounds from looking dead. Must never distract. */
+.ds-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: screen;
+}
+
+/* Marquee keyframes (signature running red strip) */
+@keyframes ds-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes ds-glow-pulse {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+
+@keyframes ds-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,41 @@
+/* ============================================================
+   SPACING, GRID & RADII
+   Rule: the site must BREATHE. Never glue blocks together.
+   ============================================================ */
+
+:root {
+  /* ---- Spacing scale ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-28: 112px;
+  --space-36: 144px;   /* between large sections (desktop) */
+
+  /* ---- Semantic spacing ---- */
+  --gap-cards: 16px;            /* between cards (12–20) */
+  --pad-card: 32px;            /* card inner padding (24–38) */
+  --pad-section: 64px;         /* large section inner padding (48–72) */
+  --gap-title-lead: 22px;      /* heading → lead */
+  --gap-text-cta: 34px;        /* text → CTA */
+  --section-gap: 150px;        /* between big sections (120–180) */
+  --section-gap-m: 88px;       /* mobile section gap */
+
+  /* ---- Layout / grid ---- */
+  --content-max: 1280px;       /* max content width (1240–1320) */
+  --pad-x-desktop: 60px;       /* side padding desktop (48–72) */
+  --pad-x-mobile: 20px;        /* side padding mobile (16–22) */
+
+  /* ---- Radii ---- */
+  --radius-block: 24px;        /* big hero blocks (20–28) */
+  --radius-card: 18px;         /* cards (16–20) */
+  --radius-ui: 12px;           /* small UI elements (10–14) */
+  --radius-pill: 999px;        /* badges, tags, CTA buttons */
+}

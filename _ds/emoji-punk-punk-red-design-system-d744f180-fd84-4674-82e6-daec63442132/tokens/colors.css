@@ -1,0 +1,60 @@
+/* ============================================================
+   COLORS — PUNK RED DIGITAL LUXURY
+   Ratio target: dark 70% / light 20% / red 10%.
+   Red is a strike, a signal — never a flood.
+   ============================================================ */
+
+:root {
+  /* ---- PUNK RED ramp (the brand accent) ---- */
+  --red: #F20D0D;            /* PUNK RED — primary accent */
+  --red-deep-blood: #8E0505; /* deep background gradients, depth */
+  --red-dark: #B70808;       /* hover states, secondary accents */
+  --red-laser: #FF3D3D;      /* bright sparks, glow highlights, active hover */
+  --red-soft: #FFB4B4;       /* very rare soft light blooms */
+
+  /* ---- Blacks (page → panels) ---- */
+  --black-absolute: #030303; /* main page background */
+  --black-deep: #080808;     /* section / large block background */
+  --black-carbon: #101010;   /* card & interface-panel background */
+  --black-graphite: #171717; /* secondary elements, badges, chips */
+  --border-dark: #2A2A2A;    /* thin frames, dividers, inactive */
+
+  /* ---- Whites & grays ---- */
+  --white: #FFFFFF;          /* headlines, key numbers, CTA text */
+  --white-soft: #F1F1F1;     /* primary light text */
+  --gray-light: #B5B5B5;     /* secondary text, explanations */
+  --gray-muted: #777777;     /* captions, dates, micro-text */
+  --gray-dark: #444444;      /* inactive, dividers, background type */
+
+  /* ---- Semantic aliases ---- */
+  --bg-page: var(--black-absolute);
+  --bg-section: var(--black-deep);
+  --bg-card: var(--black-carbon);
+  --bg-chip: var(--black-graphite);
+
+  --text-strong: var(--white);
+  --text-body: var(--white-soft);
+  --text-secondary: var(--gray-light);
+  --text-muted: var(--gray-muted);
+  --text-accent: var(--red);
+
+  --accent: var(--red);
+  --accent-hover: var(--red-dark);
+  --accent-spark: var(--red-laser);
+
+  --border-subtle: rgba(255, 255, 255, 0.12);
+  --border-faint: rgba(255, 255, 255, 0.08);
+  --border-line: var(--border-dark);
+  --border-active: rgba(242, 13, 13, 0.55);
+  --border-active-strong: rgba(242, 13, 13, 0.65);
+
+  /* ---- Signature gradients ---- */
+  --grad-cta: linear-gradient(90deg, #F20D0D 0%, #FF3D3D 100%); /* @kind color */
+  --grad-card: linear-gradient(145deg, #131313 0%, #080808 100%); /* @kind color */
+  --grad-red-section: linear-gradient(135deg, #B70808 0%, #F20D0D 55%, #8E0505 100%); /* @kind color */
+  --grad-page-glow: radial-gradient(circle at 50% 20%, #151010 0%, #030303 55%); /* @kind color */
+
+  /* ---- Dark glass ---- */
+  --glass-bg: rgba(18, 18, 18, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.08);
+}

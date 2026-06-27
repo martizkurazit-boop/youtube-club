@@ -1,0 +1,105 @@
+/* ============================================================
+   TYPOGRAPHY — Gilroy only.
+   Forbidden: Light, Thin, UltraLight, italic as primary accent.
+   Never more than 2 weights in one short text block.
+   ============================================================ */
+
+:root {
+  --font-sans: "Gilroy", system-ui, -apple-system, sans-serif;
+
+  /* ---- Weights (semantic) ---- */
+  --fw-regular: 400; /* @kind font */
+  --fw-medium: 500; /* @kind font */
+  --fw-semibold: 600; /* @kind font */
+  --fw-bold: 700; /* @kind font */
+  --fw-extrabold: 800; /* @kind font */
+  --fw-heavy: 900; /* @kind font */
+
+  /* ---- Desktop type scale ---- */
+  --t-h1-size: 64px;
+  --t-h1-lh: 0.98; /* @kind font */
+  --t-h1-tracking: -0.02em; /* @kind font */
+  --t-h1-weight: var(--fw-extrabold); /* @kind font */
+  --t-h2-size: 46px;
+  --t-h2-lh: 1.04; /* @kind font */
+  --t-h2-tracking: -0.018em; /* @kind font */
+  --t-h2-weight: var(--fw-bold); /* @kind font */
+  --t-h3-size: 24px;
+  --t-h3-lh: 1.14; /* @kind font */
+  --t-h3-tracking: -0.01em; /* @kind font */
+  --t-h3-weight: var(--fw-bold); /* @kind font */
+  --t-lead-size: 21px;
+  --t-lead-lh: 1.42; /* @kind font */
+  --t-lead-weight: var(--fw-medium); /* @kind font */
+  --t-body-size: 17px;
+  --t-body-lh: 1.54; /* @kind font */
+  --t-body-weight: var(--fw-regular); /* @kind font */
+  --t-card-size: 15px;
+  --t-card-lh: 1.48; /* @kind font */
+  --t-card-weight: var(--fw-medium); /* @kind font */
+  --t-btn-size: 14px;
+  --t-btn-lh: 1; /* @kind font */
+  --t-btn-weight: var(--fw-bold); /* @kind font */
+  --t-btn-tracking: 0.02em; /* @kind font */
+  --t-badge-size: 11px;
+  --t-badge-lh: 1; /* @kind font */
+  --t-badge-weight: var(--fw-semibold); /* @kind font */
+  --t-badge-tracking: 0.06em; /* @kind font */
+  --t-metric-size: 64px;
+  --t-metric-lh: 0.94; /* @kind font */
+  --t-metric-weight: var(--fw-extrabold); /* @kind font */
+  --t-metric-tracking: -0.02em; /* @kind font */
+
+  /* ---- Mobile overrides ---- */
+  --t-h1-size-m: 38px;
+  --t-h1-lh-m: 1.02; /* @kind font */
+  --t-h2-size-m: 30px;
+  --t-h2-lh-m: 1.08; /* @kind font */
+  --t-h3-size-m: 20px;
+  --t-h3-lh-m: 1.18; /* @kind font */
+  --t-lead-size-m: 18px;
+  --t-lead-lh-m: 1.46; /* @kind font */
+  --t-body-size-m: 16px;
+  --t-body-lh-m: 1.55; /* @kind font */
+}
+
+/* ---- Reusable type classes (optional helpers) ---- */
+.ds-h1 {
+  font-family: var(--font-sans);
+  font-weight: var(--t-h1-weight);
+  font-size: var(--t-h1-size);
+  line-height: var(--t-h1-lh);
+  letter-spacing: var(--t-h1-tracking);
+  color: var(--text-strong);
+}
+.ds-h2 {
+  font-family: var(--font-sans);
+  font-weight: var(--t-h2-weight);
+  font-size: var(--t-h2-size);
+  line-height: var(--t-h2-lh);
+  letter-spacing: var(--t-h2-tracking);
+  color: var(--text-strong);
+}
+.ds-h3 {
+  font-family: var(--font-sans);
+  font-weight: var(--t-h3-weight);
+  font-size: var(--t-h3-size);
+  line-height: var(--t-h3-lh);
+  letter-spacing: var(--t-h3-tracking);
+  color: var(--text-strong);
+}
+.ds-lead {
+  font-family: var(--font-sans);
+  font-weight: var(--t-lead-weight);
+  font-size: var(--t-lead-size);
+  line-height: var(--t-lead-lh);
+  color: var(--text-secondary);
+}
+.ds-body {
+  font-family: var(--font-sans);
+  font-weight: var(--t-body-weight);
+  font-size: var(--t-body-size);
+  line-height: var(--t-body-lh);
+  color: var(--text-secondary);
+}
+.ds-accent { color: var(--text-accent); }
